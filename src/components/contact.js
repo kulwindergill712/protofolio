@@ -12,21 +12,21 @@ class App extends React.Component {
             message: ''
         }
     }
-    handleSubmit(e) {
-        e.preventDefault();
-        console.log(this.state);
-        axios({
-            method: "POST",
-            url: "http://localhost:3002/send",
-            data: this.state
-        }).then((response) => {
-            if (response.data.status === 'success') {
-                alert("Message Sent.");
-                this.resetForm()
-            } else if (response.data.status === 'fail') {
-                alert("Message failed to send.")
-            }
-        })
+    handleSubmit = event => {
+        event.preventDefault();
+
+        const send = {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+
+        };
+
+        axios.post('http://192.168.1.22/laravel/protofolio-laravel/public/api/contact', send)
+            .then(res => {
+                alert(res.data.message);
+                console.log(res.data);
+            })
     }
 
     resetForm() {
@@ -54,15 +54,15 @@ class App extends React.Component {
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                        <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangename} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                        <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleChangemessage} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.handleChange} />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
@@ -72,16 +72,19 @@ class App extends React.Component {
         );
     }
 
-    onNameChange(event) {
-        this.setState({ name: event.target.value })
-    }
+    handleChangename = event => {
+        this.setState({ name: event.target.value });
 
-    onEmailChange(event) {
-        this.setState({ email: event.target.value })
     }
+    handleChangemessage = event => {
 
-    onMessageChange(event) {
-        this.setState({ message: event.target.value })
+        this.setState({ email: event.target.value });
+
+    }
+    handleChange = event => {
+
+
+        this.setState({ message: event.target.value });
     }
 
 
