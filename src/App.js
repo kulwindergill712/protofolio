@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Sidebar from './components/Sidebar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './components/Home'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import contact from './components/contact'
+import project from './components/project'
+import About from './components/About'
+import sociallinks from './components/sociallinks';
+
+
+class App extends Component {
+  render() {
+    return (
+
+      <div id="colorlib-page">
+
+        <div id="container-wrap">
+          <Sidebar></Sidebar>
+          <div id="colorlib-main">
+            <div id="outer-container">
+              <main id="page-wrap">
+
+                <Router>
+                  <Switch>
+
+                    <Route exact path='/' component={Home} />
+                    <Route path='/contact' component={contact} />
+                    <Route path='/about' component={About} />
+                    <Route path='/project' component={project} />
+                    <Route path='/sociallinks' component={sociallinks} />
+
+                  </Switch>
+
+                </Router>
+              </main>
+            </div>
+          </div>
+        </div>
+      </div >
+
+    );
+
+  }
 }
 
 export default App;
