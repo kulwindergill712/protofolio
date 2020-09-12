@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import './contact.css';
-
+import { Row, Col, Container } from 'react-bootstrap';
 
 class App extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class App extends React.Component {
 
         };
 
-        axios.post('http://192.168.1.22/laravel/protofolio-laravel/public/api/contact', send)
+        axios.post(window.url + 'api/contact', send)
             .then(res => {
                 alert(res.data.message);
                 console.log(res.data);
@@ -51,22 +51,34 @@ class App extends React.Component {
 
                 </div>
                 {/* contact form */}
-                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangename} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleChangemessage} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.handleChange} />
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
-                {/* contact form */}
+                <Container>
+                    <Row>
+                        <Col sm={4}>
+
+
+                        </Col>
+                        <Col sm={8}> <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                            <div className="form-group">
+                                <label htmlFor="name">Name</label>
+                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangename} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputEmail1">Email address</label>
+                                <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleChangemessage} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="message">Message</label>
+                                <textarea className="form-control" rows="5" value={this.state.message} onChange={this.handleChange} />
+                            </div>
+                            <button type="submit" className="btn btn-primary">Submit</button>
+
+
+                        </form></Col>
+                    </Row>
+
+                </Container>
+
+
             </div>
 
         );

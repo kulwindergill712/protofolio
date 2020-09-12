@@ -6,17 +6,19 @@
     background-size: cover;
 }
 
-#contact-form{
-    /* width: 15cm; */
-  
-   
-    margin: 1cm;
-    padding-left: 5cm;
-    padding-right: 5cm;
-  border-style: double;
-    padding-bottom: 8rem;
-    padding-top: 7rem;
+ #contact-form{
+    margin: 2cm;
+    padding: 2cm;
+    /* padding-left: 5cm;
+    padding-right: 5cm; */
+    border-style: double; 
+    /* padding-bottom: 8rem;
+    padding-top: 7rem; */
 }
 .form-group.form-control{
   background-color: springgreen;
+} 
+
+.img{
+  height: 10cm;
 }

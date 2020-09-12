@@ -14,7 +14,7 @@ export default props => {
       </a>
 
             <a className="menu-item" href="/about">
-                About
+                Resume
       </a>
 
 

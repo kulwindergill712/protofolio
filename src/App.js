@@ -8,6 +8,11 @@ import contact from './components/contact'
 import project from './components/project'
 import About from './components/About'
 import sociallinks from './components/sociallinks';
+import Footer from './components/Footer';
+import NotFound from './components/Notfound';
+
+window.url = "http://192.168.1.27/personal/protofolio-laravel/public/"
+
 
 
 class App extends Component {
@@ -30,8 +35,10 @@ class App extends Component {
                     <Route path='/about' component={About} />
                     <Route path='/project' component={project} />
                     <Route path='/sociallinks' component={sociallinks} />
-
+                    <Route path="*" component={NotFound} />
                   </Switch>
+
+                  <Footer />
 
                 </Router>
               </main>
