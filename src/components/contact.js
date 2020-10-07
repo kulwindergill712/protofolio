@@ -37,46 +37,44 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <div id="intro" class="view">
-                    <div class="mask rgba-black-strong">
-                        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
-                            <div class="row d-flex justify-content-center text-center">
-                                <div class="col-md-10">
-                                    <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Contact</h2>
-                                </div>
-                            </div>
-                        </div>
+                <div className="navdiv">
 
-                    </div>
-
+                    <h1>Contact Us</h1>
                 </div>
                 {/* contact form */}
-                <Container>
-                    <Row>
-                        <Col sm={4}>
 
+                <Row>
+                    <Col sm={4}>
+                        <form className="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                            <h1>CONTACT US</h1><br></br>
+                            <p>Any query?Just Send As a message,I will contact u</p>
+                            <div className="form-grou">
 
-                        </Col>
-                        <Col sm={8}> <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                            <div className="form-group">
-                                <label htmlFor="name">Name</label>
-                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangename} />
+                                <input type="text" className="form-control" placeholder="Name" value={this.state.name} onChange={this.handleChangename} />
                             </div>
-                            <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Email address</label>
-                                <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleChangemessage} />
+                            <div className="form-grou">
+
+                                <input type="email" className="form-control" placeholder="E-Mail" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleChangemessage} />
                             </div>
-                            <div className="form-group">
-                                <label htmlFor="message">Message</label>
-                                <textarea className="form-control" rows="5" value={this.state.message} onChange={this.handleChange} />
+                            <div className="form-grou">
+
+                                <textarea className="form-control" rows="5" placeholder="Message" value={this.state.message} onChange={this.handleChange} />
                             </div>
                             <button type="submit" className="btn btn-primary">Submit</button>
 
 
-                        </form></Col>
-                    </Row>
+                        </form>
+                    </Col>
 
-                </Container>
+                    <Col lg={8}>
+                        <div className="image">
+
+                        </div>
+
+                    </Col>
+                </Row>
+
+
 
 
             </div>

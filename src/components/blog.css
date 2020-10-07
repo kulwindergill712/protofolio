@@ -1,0 +1,19 @@
+.list{
+    padding: 2cm;
+}
+.blogl{
+    width: 60%;
+    margin-left: 10cm;
+    margin-right: 5cm;
+    margin-top: 2cm;
+    background-color: whitesmoke;
+   
+}
+
+.list p{
+    font-size: 0.9cm;
+}
+
+.list span{
+    padding: 1cm; 
+}

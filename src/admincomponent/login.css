@@ -1,0 +1,67 @@
+.pos{
+ padding: 8cm 10cm;
+  padding-left: 20cm;
+  
+ 
+}
+
+.pos button {
+  background-color:blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+ 
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+}
+
+
+.contact{
+    width: 10cm;
+    background:lightseagreen;
+    height: 12cm;
+    border: 4px solid #f1f1f1;
+    box-shadow: 9px 15px grey;
+   
+   
+}
+.label{
+  text-align: left; 
+
+}
+
+.body {
+   
+    background-image: url("https://cdn.hipwallpaper.com/i/5/9/fiTYsW.jpg" );
+    
+  }
+
+  .form-group {
+    
+    width: 8cm;
+    margin-left: 1cm;
+    margin-top: 0.5cm;
+  }
+
+  .form-group input {
+    
+    width: 7cm;
+   
+  }
+  .form-group label{
+ 
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+
+  }

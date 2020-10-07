@@ -1,0 +1,30 @@
+.blog{
+    width: 60%;
+    margin-left: 10cm;
+    margin-right: 5cm;
+    margin-top: 2cm;
+    background-color: whitesmoke;
+    padding: 1cm;
+}
+.blog span{
+    padding: 1cm;
+  
+}
+.blog p{
+   font-size: 1cm;
+ 
+   
+}
+.content{
+    margin-left: 0.2cm;
+    margin-top: 3cm;
+    margin-right: 1cm;
+}
+.blogpicture{
+    width: 4cm;
+    height: 2cm;
+   
+}
+.content p1{
+    text-align: justify;
+}

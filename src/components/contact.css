@@ -1,24 +1,47 @@
-#intro {
-    background: url("https://b.stripecdn.com/site-srv/assets/img/blog/posts/connect-frontend/header-background-fca7c86a3378d48e2f3bf0ccda9e7fbfa2bebe96.png")no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+
+ .contact-form{
+  background-color: whitesmoke;
+   margin: 4cm;
+   width: 80%;
+   height: 70%;
 }
 
- #contact-form{
-    margin: 2cm;
-    padding: 2cm;
-    /* padding-left: 5cm;
-    padding-right: 5cm; */
-    border-style: double; 
-    /* padding-bottom: 8rem;
-    padding-top: 7rem; */
+.image{
+ background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQJ7N4t453cnydBv50wZ5DT1zsW5muqORjsQ&usqp=CAU);
+  width: 80%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 3cm;
 }
-.form-group.form-control{
-  background-color: springgreen;
-} 
 
-.img{
-  height: 10cm;
+.form-grou input {
+  border: none;
+  border-bottom: 1px solid #00000063;
+  height: 55px;
+  width: 400px;
+  box-shadow: none;
+  outline: 0;
+  padding-left: 0px;
+}
+
+.form-grou textarea {
+  border: 0px;
+  border-bottom: 1px solid #00000063;
+  height: 50px;
+  width: 400px;
+  box-shadow: none;
+  outline: 0;
+  padding-left: 0px;
+}
+
+.form-grou{
+  padding: 0.5cm;
+}
+
+.navdiv{
+  background-color: skyblue;
+  margin-top: 2.5cm;
+  height: 2cm;
 }

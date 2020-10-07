@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 
-window.$url = 'king'
+
 
 ReactDOM.render(
   <React.StrictMode>

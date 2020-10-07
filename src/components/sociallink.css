@@ -2,3 +2,16 @@
     margin:5rem;
     margin-left: 10rem;
 }
+
+.car{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5cm;
+    margin-left: 6cm;
+
+}
+.navdiv{
+    background-color: skyblue;
+    margin-top: 2.5cm;
+    height: 2cm;
+}

@@ -1,12 +1,60 @@
 .name{
-    background-color :skyblue;
+    background-color :whitesmoke;
     margin:1cm;
     height: 6.5cm;
    
     
+}.navdiv{
+    background-color: skyblue;
+    margin-top: 2.5cm;
+    height: 2cm;
 }
 .d{
     text-align: left;
   
     padding-left: 1cm;
 }
+.d p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.5cm;
+}
+.skills{
+    background-color :whitesmoke;
+    margin:1cm;
+    height: 10cm;
+}
+.detail{
+    background-color :whitesmoke;
+    margin:1cm;
+   
+    height: 22cm;
+   
+}
+
+.education{
+ text-align: left;
+  padding-left: 1cm;
+  padding: 0.6cm;
+}
+
+.education p1{
+    font-size: 1.3cm;
+    
+
+}
+.education p2{
+    font-size: 1cm;
+
+}
+.exper{
+    background-color :whitesmoke;
+    margin-top:2cm;
+    height: 10cm;
+    width:"1cm";
+    text-align: left;
+    padding-left: 1cm;
+    padding: 0.6cm;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.5cm;
+}
+

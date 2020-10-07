@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, CardDeck } from 'react-bootstrap';
 import './project.css';
-
+import Projectdes from './projectdesvription'
 class project extends React.Component {
     constructor(props) {
         super(props);
@@ -21,48 +21,53 @@ class project extends React.Component {
 
     }
     render() {
+
         const { hits } = this.state;
-        console.log(hits);
+        let columns = [];
+        hits.map((hit, key) => {
+            // push column
+            columns.push(
+
+                <Row>
+                    <Col key={key} xs={12} sm={6} md={3} >
+                        <CardDeck style={{ display: 'block', marginTop: "2cm" }}>
+                            <Card className="row" style={{ margin: "1cm", width: '20rem' }}  >
+                                <Card.Img style={{ height: '10rem' }} variant="top" src={window.url + hit.projectimage} />
+                                <Card.Body>
+                                    <Card.Title>{hit.name}</Card.Title>
+                                    <Card.Text>
+                                        PROJECTS
+                                </Card.Text>
+                                    <a href={hit.link} style={{ margin: "2rem" }} class="btn btn-danger">Vise Live Project</a>
+                                    <a href={'description/' + hit.id} class="btn btn-primary">Read More</a>
+
+                                </Card.Body>
+                            </Card>
+                        </CardDeck>
+
+                    </Col>
+
+                </Row>
+
+            )
+        })
 
 
         return (
             <div>
-                <div id="intro" class="view">
-                    <div class="mask rgba-black-strong">
-                        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
-                            <div class="row d-flex justify-content-center text-center">
-                                <div class="col-md-10">
-                                    <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Projects</h2>
-                                </div>
-                            </div>
-                        </div>
+                <div className="navdiv">
+
+                    <h1>Projects</h1>
+                </div>
+
+                <div className="car">
+
+                    <div className="row">
+                        {columns}
 
                     </div>
-
                 </div>
 
-                <div >
-                    {hits.map((hit, key) =>
-
-                        <Row>
-                            <Col key={key} xs={12} sm={6} md={3} >
-                                <Card style={{ width: '23rem' }} key={key} >
-                                    <Card.Img style={{ height: '10rem' }} variant="top" src={hit.projectimage} />
-                                    <Card.Body>
-                                        <Card.Title>{hit.name}</Card.Title>
-                                        <Card.Text>
-                                            PROJECTS
-                                            </Card.Text>
-                                        <a href={hit.link} style={{ margin: "2rem" }} class="btn btn-danger">Vise Live Project</a>
-                                        <a href={hit.id} class="btn btn-primary">Read More</a>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-
-                        </Row>
-
-                    )}
-                </div>
 
             </div>
         );

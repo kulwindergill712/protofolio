@@ -2,7 +2,7 @@
   text-align: center;
 }
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
   height: 5rem;
   bottom: 0;
@@ -12,6 +12,7 @@
   text-align: center;
  
 }
+
 
 html,
 body {
