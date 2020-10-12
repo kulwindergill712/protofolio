@@ -28,3 +28,25 @@
 .content p1{
     text-align: justify;
 }
+
+.postcomment input{
+height: 2cm;
+border-style: groove;
+width: 60%;
+margin-left: 10cm;
+    margin-right: 5cm;
+margin-top: 0.5cm;
+}
+.postcomment button{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: green;
+    width: 3cm;
+    height: 1cm;
+    margin-left: 27cm;
+    margin-top: 0.1cm;
+}
+
+.showcomment{
+
+margin-left: -16cm;
+}

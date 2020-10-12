@@ -1,66 +1,83 @@
-import React from 'react';
+
 import { Col, Row } from 'react-bootstrap';
 import './blog.css';
 
+import React, { Component } from 'react'
+import Blogdes from './blogdes';
+
+export class blog extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            hits: [],
 
 
-const blog = () =>
-    <div>
-        <div className="navdiv">
+        };
+    }
 
-            <h1>BLOGs</h1>
-        </div>
 
-        <div className="blogl">
+    componentDidMount() {
+        const apiUrl = window.url + 'api/blog/get';
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then(data => this.setState({ hits: data.data }));
 
-            <div className='list'>
-                <Row>
-                    <Col>
-                        <div className="blogpicture">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkDq6hcRRipzC24YtsPlAXZ9tHdNDQVxEPTw&usqp=CAU"></img>
-                        </div>
-                    </Col>
-                    <Col xs={9}>
-                        <a href="/blogdes/1"> <p>HOW To Make First Laravel Project</p></a>
-                        <span>Author:kulwinder singh</span>  <span>created:june 23 2020</span><span>comments :20</span>
-                    </Col>
+    }
 
-                </Row>
-                <div className="content">
-                    <Row >
-                        <p1> Probably the most effective way to achieve paragraph unity is to express the central idea of the paragraph in a topic sentence.
+    render() {
 
-                    Topic sentences are similar to mini thesis statements. Like a thesis statement, a topic sentence has a specific main point. Whereas the thesis is the main point of the essay, the topic sentence is the main point of the paragraph. Like the thesis statement, a topic sentence has a unifying function. But a thesis statement or topic sentence alone doesn’t guarantee unity. An essay is unified if all the paragraphs relate to the thesis, whereas a paragraph is unified if all the sentences relate to the topic sentence. Note: Not all paragraphs need topic sentences. In particular, opening and closing paragraphs, which serve different functions from body paragraphs, generally don’t have topic sentences.<a href="/blogdes/1">Read More</a>
+        const { hits } = this.state;
+        console.log(hits);
+        let columns = [];
+        hits.map((hit, key) => {
+            columns.push(
 
-                        </p1>
+                <div className='list'>
+                    <Row>
+                        <Col>
+                            <div className="blogpicture">
+                                <img src={window.url + hit.picture}></img>
+                            </div>
+                        </Col>
+                        <Col xs={9}>
+                            <a href={'blogdes/' + hit.id}> <p>{hit.title}</p></a>
+                            <span>Author:{hit.author}</span>  <span>Created At:{hit.created_at}</span><span>Comments:{hit.comment}</span>
+                        </Col>
+
                     </Row>
+                    <div className="content">
+                        <Row >
+                            <p1>{hit.less_des}<a href={'blogdes/' + hit.id} >Read More</a> </p1>
+
+
+
+
+                        </Row>
+                    </div><br></br>
+                    <hr class="hr-light"></hr>
+                </div>
+
+
+            )
+        })
+        return (
+            <div>
+
+                <div className="navdiv">
+
+                    <h1>Blogs</h1>
+
+                </div>
+                <div className="blogl">
+                    {columns}
                 </div>
             </div>
-            <span>----------------------------------------------------------------------------------------------------------------------------------------------------</span>
-            <div className='list'>
-                <Row>
-                    <Col>
-                        <div className="blogpicture">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkDq6hcRRipzC24YtsPlAXZ9tHdNDQVxEPTw&usqp=CAU"></img>
-                        </div>
-                    </Col>
-                    <Col xs={9}>
-                        <a href="/blogdes/1"> <p>HOW To Make First Laravel Project</p></a>
-                        <span>Author:kulwinder singh</span>  <span>created:june 23 2020</span><span>comments :20</span>
-                    </Col>
+        )
 
-                </Row>
-                <div className="content">
-                    <Row >
-                        <p1> Probably the most effective way to achieve paragraph unity is to express the central idea of the paragraph in a topic sentence.
+    }
+}
 
-                    Topic sentences are similar to mini thesis statements. Like a thesis statement, a topic sentence has a specific main point. Whereas the thesis is the main point of the essay, the topic sentence is the main point of the paragraph. Like the thesis statement, a topic sentence has a unifying function. But a thesis statement or topic sentence alone doesn’t guarantee unity. An essay is unified if all the paragraphs relate to the thesis, whereas a paragraph is unified if all the sentences relate to the topic sentence. Note: Not all paragraphs need topic sentences. In particular, opening and closing paragraphs, which serve different functions from body paragraphs, generally don’t have topic sentences.<a href="/blogdes/1">Read More</a>
+export default blog
 
-                        </p1>
-                    </Row>
-                </div>
-            </div>
-        </div>
-    </div>
-
-export default blog;

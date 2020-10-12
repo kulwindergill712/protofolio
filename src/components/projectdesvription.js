@@ -16,7 +16,9 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        const apiUrl = window.url + 'api/project/get/1';
+
+        let param = this.props.match.params.id;
+        const apiUrl = window.url + 'api/project/get/' + param;
         fetch(apiUrl)
             .then((response) => response.json())
             .then(data => this.setState({ hits: data.data }));
@@ -28,7 +30,7 @@ class App extends React.Component {
         // console.log(this.props.id);
         return (
 
-            // hits.map((hit, key) => {
+
             <div>
                 <div className="navdiv">
 
@@ -40,8 +42,14 @@ class App extends React.Component {
                     </div>
                 ))}
                 {hits.map((hit, key) => (
-                    <div className="detail">
-                        <h1>{hit.name}</h1>
+                    <div>
+                        <div className="detail">
+                            <h1>{hit.name}</h1>
+                            <div className="des">
+                                {hit.description}
+                            </div>
+                        </div>
+
                     </div>
                 ))}
 

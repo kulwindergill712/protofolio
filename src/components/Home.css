@@ -5,16 +5,58 @@
     -o-background-size: cover;
     background-size: cover;
 }
+.landing{
+margin-top: 3cm;
+background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTdmqNLs2mNHgrrOdcNbrkFISZL0jEaY-mIdA&usqp=CAU");
+height: 18cm;
+background-repeat: no-repeat;
+background-size: 100%;
 
+
+
+}
+.image2{
+ padding-top: 4cm; 
+ padding-bottom:  5cm; 
+
+ background-color: red;
+ padding-left: 1cm;
+border-top-left-radius: 80%;
+border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 80%;
+}
+.image2 img{
+    border-radius: 50%;
+    height: 9cm;
+    width: 10cm; 
+    transform: rotate(90deg);
+}
+.para{
+    padding-top: 4cm;
+    padding-right: 7cm;
+}
+
+.para p{
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 8cm;
+font-size: 1cm;
+font-weight: 880;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.upperdiv{
+  /* padding: 2cm; */
+margin-top: 5cm;
+
+}
 .crousel{
-    margin: 2cm;
-    width:48cm;
-    padding-top: 3cm;
-    padding-right: 2cm;
-   
+    width: 15cm;
+    margin-left: 2cm;
+ 
+  
 }
 .item{
-    height: 15cm;
+    height: 9cm;
 }
 .centerdiv{
     background-color:whitesmoke;

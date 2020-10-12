@@ -22,7 +22,7 @@ import Project from './admincomponent/project';
 import Contact from './admincomponent/contactus';
 import Ablog from './admincomponent/blog';
 
-window.url = "http://192.168.1.14/personal/protofolio-laravel/public/"
+window.url = "http://192.168.1.12/personal/protofolio-laravel/public/"
 
 const LoginContainer = () => (
   <div >
@@ -71,7 +71,7 @@ const DefaultContainer = () => (
                 <Route path='/sociallinks' component={sociallinks} />
                 <Route path='/description/:id' component={Projectdes} />
                 <Route path='/blog' component={Blog} />
-                <Route path='/blogdes/:1' component={Blogdes} />
+                <Route path='/blogdes/:id' component={Blogdes} />
                 <Route path="*" component={NotFound} />
               </Switch>
             </Router>
@@ -96,6 +96,7 @@ class App extends Component {
     );
 
   }
+
 }
 
 export default App;

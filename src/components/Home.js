@@ -83,9 +83,55 @@ class home extends React.Component {
 
         return (
             <div >
-                <Carousel className="crousel">
-                    {img}
-                </Carousel>
+                <div className="landing">
+                    <Row>
+
+                        <Col xs={10} md={6}>
+
+                            <div className='para'>
+                                <p>Hey! I'm a</p>
+                                <p>Kulwinder Singh</p>
+                                <p>UI/UX & BACKEND DEVELOPLER</p>
+                            </div>
+
+                        </Col>
+                        <Col xs={8} md={6}>
+                            <div className='image2'>
+                                <img src='front.jpg'></img>
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
+                <div className="upperdiv" >
+                    <Row >
+                        <Col>
+                            <div className='crousel'>
+                                <Carousel >
+                                    {img}
+                                </Carousel>
+                            </div>
+                        </Col>
+                        <Col>
+                            <a href="" class="teal-text">
+                                <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
+                            </a>
+                            <h4 class="mb-3"><strong>This is title of the news</strong></h4>
+                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                            quod maxime
+                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
+                            officiis
+                            debitis aut rerum.</p>
+
+                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                            quod maxime
+                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
+                            officiis
+                            debitis aut rerum.</p>
+                            <p>by <a><strong>Kulwinder Singh</strong></a>, 26/08/2016</p>
+
+                        </Col>
+                    </Row>
+                </div>
                 <div className="centerdiv">
                     <Row>
                         <Col>
@@ -99,7 +145,7 @@ class home extends React.Component {
                             </div>
                         </Col>
                         <Col>
-                            <img
+                            <img style={{ height: "15cm" }}
                                 className="d-block w-100 item"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8tE-HHsIXzxibzqxui8M13DjpMgb-Nbl8Wg&usqp=CAU"
                                 alt="First slide"
