@@ -19,7 +19,7 @@ background-size: 100%;
  padding-top: 4cm; 
  padding-bottom:  5cm; 
 
- background-color: red;
+ background-color:whitesmoke;
  padding-left: 1cm;
 border-top-left-radius: 80%;
 border-bottom-left-radius: 30%;
@@ -138,5 +138,10 @@ margin-top: 5cm;
 
    
 
+}
+.quote{
+padding: 2cm;
+
+margin-left: -10cm;
 }
 

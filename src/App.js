@@ -22,7 +22,7 @@ import Project from './admincomponent/project';
 import Contact from './admincomponent/contactus';
 import Ablog from './admincomponent/blog';
 
-window.url = "http://192.168.1.12/personal/protofolio-laravel/public/"
+window.url = "http://192.168.1.15/personal/protofolio-laravel/public/"
 
 const LoginContainer = () => (
   <div >

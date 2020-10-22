@@ -112,22 +112,10 @@ class home extends React.Component {
                             </div>
                         </Col>
                         <Col>
-                            <a href="" class="teal-text">
-                                <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                            </a>
-                            <h4 class="mb-3"><strong>This is title of the news</strong></h4>
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                            quod maxime
-                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
-                            officiis
-                            debitis aut rerum.</p>
-
-                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-                            quod maxime
-                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
-                            officiis
-                            debitis aut rerum.</p>
-                            <p>by <a><strong>Kulwinder Singh</strong></a>, 26/08/2016</p>
+                            <div className='quote'>
+                                <h3>“The Best Way To Get Started Is To Quit Talking And Begin Doing.”</h3><br></br><br></br>
+                                <h3>“Don’t Let Yesterday Take Up Too Much Of Today.”</h3>
+                            </div>
 
                         </Col>
                     </Row>

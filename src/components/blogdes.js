@@ -55,7 +55,7 @@ class blogdes extends Component {
                     </Row>
                     <div className="content">
                         <Row >
-                            <p1>{hit.description} </p1>
+                            {hit.description}
                         </Row>
                     </div>
 
