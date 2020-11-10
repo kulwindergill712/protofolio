@@ -82,7 +82,7 @@ class home extends React.Component {
         })
 
         return (
-            <div >
+            < >
                 <div className="landing">
                     <Row>
 
@@ -97,7 +97,7 @@ class home extends React.Component {
                         </Col>
                         <Col xs={8} md={6}>
                             <div className='image2'>
-                                <img src='front.jpg'></img>
+                                <img src='image.png'></img>
                             </div>
                         </Col>
                     </Row>
@@ -111,7 +111,7 @@ class home extends React.Component {
                                 </Carousel>
                             </div>
                         </Col>
-                        <Col>
+                        <Col xs={2} md={4} lg={6} >
                             <div className='quote'>
                                 <h3>“The Best Way To Get Started Is To Quit Talking And Begin Doing.”</h3><br></br><br></br>
                                 <h3>“Don’t Let Yesterday Take Up Too Much Of Today.”</h3>
@@ -170,7 +170,7 @@ class home extends React.Component {
 
                     <Row>
 
-                        <Col>
+                        <Col  >
 
                             <Card style={{ width: '19rem', height: "14cm" }}>
                                 <Card.Img style={{ height: '10rem' }} variant="top" src="data:image/png;base64,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" />
@@ -209,7 +209,7 @@ class home extends React.Component {
                     </Row>
 
                 </div>
-            </div >
+            </ >
 
 
 

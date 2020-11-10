@@ -29,7 +29,7 @@ border-bottom-left-radius: 30%;
     border-radius: 50%;
     height: 9cm;
     width: 10cm; 
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
 }
 .para{
     padding-top: 4cm;
@@ -143,5 +143,11 @@ margin-top: 5cm;
 padding: 2cm;
 
 margin-left: -10cm;
+}
+
+@media only screen and (max-width: 414px) {
+  
+
+     
 }
 

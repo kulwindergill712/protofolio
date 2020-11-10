@@ -71,7 +71,7 @@ class about extends React.Component {
 
                                 <h1>Higher Secondary Education<p1>(2014-2016)</p1></h1>
                                 <p2>School:  Apollo Public Senior Secondary School</p2><br></br>
-                                <p2>CGPA:  8.2</p2>
+                                <p2>percentage:  68%</p2>
 
                             </div>
                             <div className='education'>
@@ -79,7 +79,7 @@ class about extends React.Component {
                                 <h1>Bachelor Education<p1>(2016-2020)</p1></h1>
                                 <p2>B-Tech(CSE)</p2>
                                 <p2>University:  Punjabi University Patiala</p2><br></br>
-                                <p2>CGPA:  8.2</p2>
+                                <p2>CGPA:  7.86</p2>
 
                             </div>
                         </div>

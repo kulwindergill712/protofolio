@@ -18,11 +18,11 @@ import Adminhome from './admincomponent/adminhome';
 import Side from './admincomponent/side';
 import Nav from './admincomponent/nav';
 import Social from './admincomponent/social';
-import Project from './admincomponent/project';
+import adminProject from './admincomponent/project';
 import Contact from './admincomponent/contactus';
 import Ablog from './admincomponent/blog';
 
-window.url = "http://192.168.1.15/personal/protofolio-laravel/public/"
+window.url = "http://192.168.1.25/personal/protofolio-laravel/public/"
 
 const LoginContainer = () => (
   <div >
@@ -40,7 +40,7 @@ const LoginContainer = () => (
           <Route exact path="/admin" component={Login} />
           <Route path="/admin/home" component={Adminhome} />
           <Route path="/admin/social" component={Social} />
-          <Route path="/admin/project" component={Project} />
+          <Route path="/admin/project" component={adminProject} />
           <Route path="/admin/contact" component={Contact} />
           <Route path="/admin/blog" component={Ablog} />
 
